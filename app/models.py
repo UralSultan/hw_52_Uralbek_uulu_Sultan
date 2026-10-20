@@ -1,12 +1,13 @@
 from django.db import models
 
-class Task(models.Model):
 
-    STATUS_CHOICES = [
-        ('new', 'Новая'),
-        ('in_progress', 'В процессе'),
-        ('done', 'Сделанно'),
-    ]
+STATUS_CHOICES = [
+    ('new', 'Новая'),
+    ('in_progress', 'В процессе'),
+    ('done', 'Сделанно'),
+]
+
+class Task(models.Model):
     description = models.TextField('Описание')
     status = models.CharField(
         'Статус',
